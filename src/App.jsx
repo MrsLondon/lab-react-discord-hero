@@ -1,9 +1,13 @@
-
+import Navbar from './component/Navbar/Navbar';
+import Hero from './component/Hero/Hero';
 import './App.css'
 
 function App() {
   return (
-    <div className="App"></div>
+    <div className="App">
+      <Navbar/>
+      <Hero/>
+    </div>
   )
 }
 

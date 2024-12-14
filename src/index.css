@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,6 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -23,6 +24,7 @@ a:hover {
 }
 
 body {
+font-family: 'Poppins', sans-serif;
   margin: 0;
   display: flex;
   place-items: center;
@@ -35,17 +37,93 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: transparent;
 }
+
+nav img {
+  height: 20px;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+nav img:hover {
+  opacity: 0.8;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  min-height: 100vh;
+}
+
+.hero-text {
+  left: 10%; /* Adjust for the desired horizontal alignment */
+  top: 30%; /* Vertical centering */
+  transform: translateY(-80%); /* To ensure it’s truly centered */
+  max-width: 50%; /* Control the width of the text block */
+}
+
+.hero-text h1 {
+  font-size: 2em;
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 2em;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+
+
+.mac-button {
+  background-color: white;
+  color: black;
+  padding: 0.6em 1.2em; /* Smaller padding for a more compact button */
+  font-size: 0.9em;  /* Smaller text */
+  border-radius: 20px;  /* More rounded corners */
+  width: auto;
+}
+
+.browser-button {
+  background-color: black;
+  color: white;
+  padding: 0.6em 1.2em;  /* Smaller padding for a more compact button */
+  font-size: 0.9em;  /* Smaller text */
+  border-radius: 20px;  /* More rounded corners */
+  width: auto;
+}
+
+.hero-image {
+  position: absolute;
+  bottom: 10%; /* Distance from the bottom */
+  right: 10%; /* Distance from the right */
+  max-width: 40%; /* Control image size */
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensure the image doesn’t get distorted */
+}
+
+
+
 button:hover {
   border-color: #646cff;
 }
@@ -54,15 +132,4 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+
